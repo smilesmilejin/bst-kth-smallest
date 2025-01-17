@@ -108,7 +108,16 @@ Summary of one-time activity setup:
 
 Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the keys (values) of the nodes in the tree. It is guaranteed k will be smaller than the size of the tree.
 
+- *Parameters*:
+  - *root (TreeNode)*: The root of the tree
+  - *k (int)*: represents the kth smallest value which we would like to find
+  
+- *Returns*:
+  - *int*: the kth smallest value
+  
 For this exercise, consider the key and value to be the same.
+
+*Hint* You are allowed to implement and use other common BST functions in order to implement this function.
 
 ### Example 1:
 
