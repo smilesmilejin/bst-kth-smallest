@@ -6,15 +6,16 @@ class TreeNode:
         self.right = right
 
 
+def inorder(current, values):
+    if not current:
+        return values
+    
+    inorder(current.left, values)
+    values.append(current.key)
+    inorder(current.right, values)
+
+    return values
+
 def kth_smallest(root, k):
-    """
-    This function takes in the root of the tree and an integer k and returns the kth smallest value in the tree.
-  
-    Parameters:
-    root (TreeNode): The root of the tree
-    k (int): represents the kth smallest value which we would like to find
-  
-    Returns:
-    int: the kth smallest value
-    """
-    pass
+    values = inorder(root, [])
+    return values[k - 1]
