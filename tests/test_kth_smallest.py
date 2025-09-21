@@ -7,7 +7,7 @@ def test_kth_smallest_on_valid_bst():
     k = 3
 
     #Act
-    result = kth_Smallest(root, k)
+    result = kth_smallest(root, k)
 
     #Assert
     assert result == 5

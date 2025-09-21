@@ -17,4 +17,19 @@ def kth_smallest(root, k):
     Returns:
     int: the kth smallest value
     """
-    pass
+    values = []
+
+    values_list = kth_smallest_helper(root, values)
+
+    return values_list[k-1]
+
+def kth_smallest_helper(current_node, values):
+    if not current_node:
+        return values
+    
+    # Inorder traversal (Left → Root → Right) -  gives sorted order by key.
+    kth_smallest_helper(current_node.left, values)
+    values.append(current_node.key)
+    kth_smallest_helper(current_node.right, values)
+
+    return values
